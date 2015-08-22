@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "TestFlight.h"
-#import "BITHockeyManager.h"
-#import "BITCrashManager.h"
+//#import "TestFlight.h"
+//#import "BITHockeyManager.h"
+//#import "BITCrashManager.h"
 
 #define NSStringize_helper(x) #x
 #define NSStringize(x) @NSStringize_helper(x)
@@ -18,18 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-#ifdef RELEASE
-	// Initialize TestFlight
-	[TestFlight takeOff:NSStringize(TESTFLIGHT_APP_TOKEN)];
-
-	// Initialize HockeyApp
-	NSString *hockeyAppIdentifier = NSStringize(HOCKEY_APP_ID);
-	[[BITHockeyManager sharedHockeyManager] configureWithBetaIdentifier:hockeyAppIdentifier
-														 liveIdentifier:hockeyAppIdentifier
-															   delegate:self];
-	[[BITHockeyManager sharedHockeyManager] crashManager].delegate = self;
-	[[BITHockeyManager sharedHockeyManager] startManager];
-#endif
+//#ifdef RELEASE
+//	// Initialize TestFlight
+//	[TestFlight takeOff:NSStringize(TESTFLIGHT_APP_TOKEN)];
+//
+//	// Initialize HockeyApp
+//	NSString *hockeyAppIdentifier = NSStringize(HOCKEY_APP_ID);
+//	[[BITHockeyManager sharedHockeyManager] configureWithBetaIdentifier:hockeyAppIdentifier
+//														 liveIdentifier:hockeyAppIdentifier
+//															   delegate:self];
+//	[[BITHockeyManager sharedHockeyManager] crashManager].delegate = self;
+//	[[BITHockeyManager sharedHockeyManager] startManager];
+//#endif
     return YES;
 }
 

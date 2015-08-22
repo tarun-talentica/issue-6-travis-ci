@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BITHockeyManagerDelegate.h"
+//#import "BITHockeyManagerDelegate.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, BITHockeyManagerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate /*,BITHockeyManagerDelegate*/>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -40,8 +40,7 @@
 
 /* Begin PBXFileReference section */
 		269B252E822D41C4A19A8A6B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		463477B794E2437F96D66A6C /* Pods-TravisExampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravisExampleTests.xcconfig"; path = "Pods/Pods-TravisExampleTests.xcconfig"; sourceTree = "<group>"; };
-		5E909003959A4C8F98628FAB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		49B7AA8369813187000A9DB9 /* Pods-TravisExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravisExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravisExampleTests/Pods-TravisExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD3B30BA181408B500D0AA5B /* TravisExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravisExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD3B30BD181408B500D0AA5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AD3B30BF181408B500D0AA5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +65,7 @@
 		AD3B30F0181408B600D0AA5B /* TravisExampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TravisExampleTests.h; sourceTree = "<group>"; };
 		AD3B30F1181408B600D0AA5B /* TravisExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TravisExampleTests.m; sourceTree = "<group>"; };
 		DBEE2933130947E5B87FAC9E /* libPods-TravisExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TravisExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F2E83993FBA6B0A5866D67 /* Pods-TravisExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravisExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravisExampleTests/Pods-TravisExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,7 @@
 				AD3B30EA181408B600D0AA5B /* TravisExampleTests */,
 				AD3B30BC181408B500D0AA5B /* Frameworks */,
 				AD3B30BB181408B500D0AA5B /* Products */,
-				463477B794E2437F96D66A6C /* Pods-TravisExampleTests.xcconfig */,
-				5E909003959A4C8F98628FAB /* Pods.xcconfig */,
+				F165E446D68BE4B32DE08B33 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +174,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F165E446D68BE4B32DE08B33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8F2E83993FBA6B0A5866D67 /* Pods-TravisExampleTests.debug.xcconfig */,
+				49B7AA8369813187000A9DB9 /* Pods-TravisExampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -216,7 +224,7 @@
 			name = TravisExampleTests;
 			productName = TravisExampleTests;
 			productReference = AD3B30E3181408B600D0AA5B /* TravisExampleTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -224,6 +232,7 @@
 		AD3B30B2181408B500D0AA5B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0630;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Mattes Groeger";
 			};
@@ -327,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-TravisExampleTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TravisExampleTests/Pods-TravisExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AD3B30E1181408B600D0AA5B /* ShellScript */ = {
@@ -470,7 +479,6 @@
 		};
 		AD3B30F6181408B600D0AA5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E909003959A4C8F98628FAB /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TravisExample/TravisExample-Prefix.pch";
@@ -485,7 +493,6 @@
 		};
 		AD3B30F7181408B600D0AA5B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E909003959A4C8F98628FAB /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
@@ -511,7 +518,7 @@
 		};
 		AD3B30F9181408B600D0AA5B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 463477B794E2437F96D66A6C /* Pods-TravisExampleTests.xcconfig */;
+			baseConfigurationReference = F8F2E83993FBA6B0A5866D67 /* Pods-TravisExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravisExample.app/TravisExample";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -529,7 +536,7 @@
 		};
 		AD3B30FA181408B600D0AA5B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 463477B794E2437F96D66A6C /* Pods-TravisExampleTests.xcconfig */;
+			baseConfigurationReference = 49B7AA8369813187000A9DB9 /* Pods-TravisExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TravisExample.app/TravisExample";
 				FRAMEWORK_SEARCH_PATHS = (
